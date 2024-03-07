@@ -1,6 +1,7 @@
 # Logger
 
 ## Usage
+
 Install package:
 
 ```bash
@@ -15,7 +16,7 @@ import { Logger, LoggerOptions } from '@fethcat/logger'
 const logger = Logger.create<'my_action_message'>(
   'instanceId',
   { silent: false },
-  { app: 'app', env: 'env', version: 'version' }
+  { app: 'app', env: 'env', version: 'version' },
 )
 logger.info('my_app_message', { meta: 'value' })
 ```
@@ -28,7 +29,7 @@ import { Logger, LoggerOptions } from '@fethcat/logger'
 const logger = Logger.create<'my_action_message'>(
   'instanceId',
   { silent: false },
-  { app: 'app', env: 'env', version: 'version' }
+  { app: 'app', env: 'env', version: 'version' },
 )
 
 const { success, failure } = logger.start('my_action_message', { meta: 'value' }) // Logs "my_action_message" with meta { meta: 'value' }
@@ -45,6 +46,6 @@ try {
 
 The following options are available:
 
-| Name   | Type    | Default value | Description                             |
-| ------ | ------- | ------------- | --------------------------------------- |
-| silent | boolean | false         | Whether the logger should silent or not |
+| Name   | Type    | Default value | Description                                |
+| ------ | ------- | ------------- | ------------------------------------------ |
+| silent | boolean | false         | Whether the logger should be silent or not |

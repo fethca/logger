@@ -13,9 +13,9 @@
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint \"{src,tests}/**/*.ts\"",
     "format": "prettier -w \"{src,tests}/**/*.ts\"",
-    "version:patch": "yarn version patch",
-    "version:minor": "yarn version minor",
-    "version:major": "yarn version major"
+    "version:patch": "version patch",
+    "version:minor": "version minor",
+    "version:major": "version major"
   },
   "bin": {
     "version": "./dist/index.js"
