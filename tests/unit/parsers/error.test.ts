@@ -12,7 +12,7 @@ describe('parse', () => {
       isAxiosError: true,
       message: 'message',
       stack: 'stack',
-      config: { baseURL: 'akeneo.com', url: '/api', method: 'get' },
+      config: { baseURL: 'titi.com', url: '/api', method: 'get' },
       response: { statusText: 'OK', status: 200, data: 'Toto' },
     }
     const parser = new ErrorParser()
@@ -170,10 +170,10 @@ describe('parseAxiosError', () => {
   it('should join url from config url infos', () => {
     const error: IAxiosError = {
       isAxiosError: true,
-      config: { baseURL: 'akeneo.com', url: '/api' },
+      config: { baseURL: 'titi.com', url: '/api' },
     }
     const result = new ErrorParser()['parseAxiosError'](error)
-    expect(result.config.url).toBe('akeneo.com/api')
+    expect(result.config.url).toBe('titi.com/api')
   })
 })
 
