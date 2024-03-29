@@ -5,7 +5,7 @@
 Install package:
 
 ```bash
-yarn add @fethcat/logger
+pnpm add @fethcat/logger
 ```
 
 Create logger with message and options:
