@@ -18,9 +18,6 @@
     "version:minor": "version minor",
     "version:major": "version major"
   },
-  "bin": {
-    "version": "./dist/index.js"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:fethca/logger.git"
