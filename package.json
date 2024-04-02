@@ -14,9 +14,9 @@
     "format": "prettier -w \"{src,tests}/**/*.ts\"",
     "lint": "eslint \"{src,tests}/**/*.ts\"",
     "test": "vitest run --coverage",
-    "version:patch": "version patch",
-    "version:minor": "version minor",
-    "version:major": "version major"
+    "version:patch": "fethca-version patch",
+    "version:minor": "fethca-version minor",
+    "version:major": "fethca-version major"
   },
   "repository": {
     "type": "git",
