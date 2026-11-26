@@ -14,7 +14,7 @@ export class Parser<T = Record<string, unknown>> {
     } else {
       try {
         str = JSON.stringify(info)
-      } catch (error) {
+      } catch {
         str = inspect(info)
       }
     }
