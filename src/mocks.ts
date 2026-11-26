@@ -1,22 +1,23 @@
+import type { Mock } from 'vitest'
 import { IAction, IActions, ILogger } from './types.js'
 
 export class MockedLogger<T extends string = ''> implements ILogger<T> {
   jobId = 'jobId'
-  child = vi.fn().mockReturnThis()
-  setParser = vi.fn()
-  addMeta = vi.fn()
-  switchTransport = vi.fn()
-  action = vi.fn().mockReturnValue({
+  child: Mock = vi.fn().mockReturnThis()
+  setParser: Mock = vi.fn()
+  addMeta: Mock = vi.fn()
+  switchTransport: Mock = vi.fn()
+  action: Mock = vi.fn().mockReturnValue({
     success: vi.fn(),
     skip: vi.fn(),
     failure: vi.fn().mockImplementation((error) => error),
   })
-  actions = vi.fn().mockReturnValue({
+  actions: Mock = vi.fn().mockReturnValue({
     end: vi.fn(),
   })
-  info = vi.fn()
-  warn = vi.fn()
-  error = vi.fn()
+  info: Mock = vi.fn()
+  warn: Mock = vi.fn()
+  error: Mock = vi.fn()
 }
 
 export function mockAction<T extends string = ''>(logger: ILogger<T>): IAction {
